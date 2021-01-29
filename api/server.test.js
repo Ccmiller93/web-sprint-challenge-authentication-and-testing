@@ -1,7 +1,6 @@
 const request = require('supertest');
 const server = require('./server');
 const db = require('../data/dbConfig');
-const { truncate } = require('../data/dbConfig');
 const testUser = { username: 'testing', password: 'testing' }
 
 // Write your tests here
@@ -20,7 +19,7 @@ describe('server.js', () => {
       expect(res.type).toBe('application/json')
     });
   });
-  
+
   describe("registering", () => {
     it('should return a status code of 201 when adding a new user', async () => {
       await db('users').truncate()
