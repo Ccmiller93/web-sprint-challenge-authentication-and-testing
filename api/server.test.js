@@ -28,7 +28,7 @@ describe('server.js', () => {
         .send(testUser);
       expect(res.status).toBe(201)
     });
-    it('should return a status code of 500 with an invalid user', async () => {
+    it('should return a status code of 400 with an invalid user', async () => {
       const res = await request(server)
         .post('/api/auth/register')
         .send({ user: "WSB", pass: "GME*" });
