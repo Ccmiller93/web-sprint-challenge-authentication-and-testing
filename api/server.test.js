@@ -5,7 +5,7 @@ const testUser = { username: 'testing', password: 'testing' }
 
 // Write your tests here
 test('sanity', () => {
-  expect(false).toBe(true)
+  expect(true).toBe(true)
 })
 
 describe('server.js', () => {
@@ -32,7 +32,7 @@ describe('server.js', () => {
       const res = await request(server)
         .post('/api/auth/register')
         .send({ user: "WSB", pass: "GME*" });
-      expect(res.status).toBe(500);
+      expect(res.status).toBe(400);
     });
   });
 
