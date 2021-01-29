@@ -42,7 +42,7 @@ Your finished project must include all of the following requirements (further in
 - [ ] Middleware used to restrict access to resources from non-authenticated requests, implemented inside `./api/middleware/restricted.js`.
 - [ ] A minimum of 2 tests per API endpoint, implemented inside `./api/server.test.js`. The `package.json` includes the "test" script.
 
-**Notes:**
+**Notes:** 
 
 - You are welcome to create additional files but **do not move or rename existing files** or folders.
 - Do not alter your `package.json` file except to install extra libraries. The "test" script has been added for you.
